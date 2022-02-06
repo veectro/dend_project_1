@@ -6,6 +6,7 @@ A startup called Sparkify wants to analyze the data they've been collecting on s
 music streaming app. The analytics team is particularly interested in understanding what songs users are listening to.
 Currently, they don't have an easy way to query their data, which resides in a directory of JSON logs on user activity
 on the app, as well as a directory with JSON metadata on the songs in their app.
+
 ---
 
 ## Project Description
@@ -13,7 +14,6 @@ on the app, as well as a directory with JSON metadata on the songs in their app.
 The startup sparkify want to analyze the behavior of their users on their music
 streaming app, so they could understand what songs users are listening to. Therefore in this project, a star schema 
 is chosen, because it is optimized for querying the user's behaviour.
-
 
 ---
 
