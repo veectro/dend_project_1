@@ -127,7 +127,7 @@ The star schema is chosen because it is optimized for querying the user's behavi
 The goal to be achieved with the star schema is to optimize queries on song play analysis.
 
 Following is the ERD of the star schema:
-![ERD of the starschema](/home/sfrozy/PycharmProjects/Udacity-DEND/project_1_data_modelling_with_postgres/assets/sparkifydb_erd.png)
+![ERD of the starschema](./assets/sparkifydb_erd.png)
 ### Fact Table
 
 #### songplays table
