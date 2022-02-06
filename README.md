@@ -15,6 +15,15 @@ The startup sparkify want to analyze the behavior of their users on their music
 streaming app, so they could understand what songs users are listening to. Therefore in this project, a star schema 
 is chosen, because it is optimized for querying the user's behaviour.
 
+In this Project an ETL Pipeline is implemented, which transforms the data (songs and logs) from the raw data 
+to a star schema data model.
+
+The process of ETL is described in the following steps:
+1. Read from the raw data (songs and logs)
+2. Transform the `songs` data into `songs` and `artists` tables
+3. Filter by `nextSong`-Event only and transform the `log` data into `users` and `time` tables
+4. Join the `songs` and `artists` tables with the `users` and `time` tables, so table `songplays` could be generated
+
 ---
 
 ## Project Structure
