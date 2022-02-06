@@ -13,7 +13,7 @@ songplay_table_create = ("""
         songplay_id SERIAL PRIMARY KEY , 
         start_time TIMESTAMP, 
         user_id INT, 
-        level VARCHAR, 
+        level VARCHAR(5), 
         song_id VARCHAR, 
         artist_id VARCHAR, 
         session_id INT, 
@@ -27,8 +27,8 @@ user_table_create = ("""
         user_id INT PRIMARY KEY, 
         first_name VARCHAR, 
         last_name VARCHAR, 
-        gender VARCHAR, 
-        level VARCHAR
+        gender CHAR(1), 
+        level VARCHAR(5)
     );
 """)
 
@@ -37,7 +37,7 @@ song_table_create = ("""
         song_id VARCHAR PRIMARY KEY, 
         title VARCHAR, 
         artist_id VARCHAR, 
-        year INT, 
+        year SMALLINT, 
         duration FLOAT
     );
 """)
@@ -55,12 +55,12 @@ artist_table_create = ("""
 time_table_create = ("""
     CREATE TABLE IF NOT EXISTS time(
         start_time TIMESTAMP, 
-        hour INT, 
-        day INT, 
-        week INT, 
-        month INT, 
-        year INT, 
-        weekday INT
+        hour SMALLINT, 
+        day SMALLINT, 
+        week SMALLINT, 
+        month SMALLINT, 
+        year SMALLINT, 
+        weekday SMALLINT
     );
 """)
 
