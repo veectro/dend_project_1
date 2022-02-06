@@ -5,7 +5,13 @@ import pandas as pd
 from sql_queries import *
 
 
-def process_song_file(cur, filepath):
+def process_song_file(cur, filepath: str):
+    """
+    This method will process the song file from the given path and insert the data into the database.
+
+    :param cur: psycopg2 cursor
+    :param filepath: filepath for song file
+    """
     # open song file
     df = pd.read_json(filepath, lines=True)
 
@@ -19,7 +25,13 @@ def process_song_file(cur, filepath):
     cur.execute(artist_table_insert, artist_data)
 
 
-def process_log_file(cur, filepath):
+def process_log_file(cur, filepath: str):
+    """
+    This method will process the log filefrom the given path and insert the data into the database.
+
+    :param cur: psycopg2 cursor
+    :param filepath: filepath for song file
+    """
     # open log file
     df = pd.read_json(filepath, lines=True)
 
@@ -65,7 +77,16 @@ def process_log_file(cur, filepath):
         cur.execute(songplay_table_insert, songplay_data)
 
 
-def process_data(cur, conn, filepath, func):
+def process_data(cur, conn, filepath: str, func):
+    """
+    This method read the files from the given path iteratively and call the given function.
+
+    :param cur: psycopg2 cursor
+    :param conn: psycopg2 connection
+    :param filepath: folder path for the files
+    :param func: function to be called (process_song_file or process_log_file)
+    :return:
+    """
     # get all files matching extension from directory
     all_files = []
     for root, dirs, files in os.walk(filepath):
